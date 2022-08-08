@@ -1,9 +1,8 @@
 NAME		=	libft.a
 CC			=	gcc
-CFLAGS		=	-Wall -Werror -Wextra
-OBJ_DIR		=	./obj
-SRC_DIR		=	./src
-# HEADER_DIR	=	./inc
+CFLAGS		=	-Wall -Werror -Wextra -Iheader
+OBJ_DIR		=	./obj/
+SRC_DIR		=	./src/
 
 SRC			=	ft_calloc.c		ft_bzero.c		ft_memset.c			\
 				ft_memcpy.c		ft_memmove.c	ft_memchr.c			\
@@ -18,50 +17,42 @@ SRC			=	ft_calloc.c		ft_bzero.c		ft_memset.c			\
 				ft_split.c		ft_putstr_fd.c	ft_putendl_fd.c		\
 				ft_putnbr_fd.c	ft_putchar_fd.c
 
-BONUS_SRC	=	bonus_src/ft_lstnew.c				bonus_src/ft_lstadd_back.c	\
-				bonus_src/ft_lstadd_front.c			bonus_src/ft_lstclear.c		\
-				bonus_src/ft_lstdelone.c			bonus_src/ft_lstiter.c		\
-				bonus_src/ft_lstlast.c				bonus_src/ft_lstsize.c
+BONUS_SRC	=	ft_lstnew.c				ft_lstadd_back.c	\
+				ft_lstadd_front.c		ft_lstclear.c		\
+				ft_lstdelone.c			ft_lstiter.c		\
+				ft_lstlast.c			ft_lstsize.c
 
 OBJ			= $(patsubst %.c,$(OBJ_DIR)%.o,$(SRC))
-# HEADERS		= $(HEADER_DIR)*.h
+BONUS_OBJ	= $(patsubst %.c,$(OBJ_DIR)%.o,$(BONUS_SRC))
 
 $(NAME): $(OBJ_DIR) $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $@
+	@ar -crs $(NAME) $(OBJ)
+	@echo "creating: $(NAME)"
+	@echo "[√]"
 
 $(OBJ_DIR):
-	mkdir $(OBJ_DIR)
+	@mkdir $(OBJ_DIR)
+	@echo "compiling $(NAME)-object-files"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-
-# OBJ			=	$(SRC:%.c=$(OBJDIR)/%.o)
-# BONUS_OBJ	=	$(BONUS_SRC:%.c=$(OBJDIR)/%.o)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
-# $(NAME): $(OBJ)
-# 	ar -crs $(NAME) $(OBJDIR)/*.o
-
-# %.o: %.c
-# 	$(CC) -c $(CFLAGS) -o $@ $^
-
-# $(OBJDIR)/%.o: %.c
-# 	@mkdir -p $(OBJDIR)
-# 	$(CC) -c $(CFLAGS) $< -o $@
-
-bonus: $(OBJ) $(BONUS_OBJ)
-	ar -rcs $(NAME) $(OBJDIR)/*.o
+bonus: $(OBJ_DIR) $(OBJ) $(BONUS_OBJ)
+	@ar -rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+	@echo "compiling $(NAME)-bonus-object-files"
+	@echo "[√]"
 
 clean:
-	rm -f $(OBJ) $(BONUS_OBJ)
+	@rm -f $(OBJ) $(BONUS_OBJ)
+	@rm -rf $(OBJ_DIR)
+	@echo "$(NAME)-object-files deleted"
 
 fclean: clean
-	rm -f $(NAME)
-	rm -f $(BONUS_OBJ)
+	@rm -f $(NAME)
+	@rm -f $(BONUS_OBJ)
 
 re: fclean all
-
 
 .PHONY: all clean fclean re
