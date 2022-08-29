@@ -1,6 +1,6 @@
 # Libft
 
-Task: Re-coding a my own library with standard functions of the C library (libc) and some utility functions needed for later projects.
+Task: Re-coding my own library with standard functions of the C library (libc) and some utility functions needed for later projects.
 
 Key learning points of this project were:
   - Handling different variable types and memory allocation
