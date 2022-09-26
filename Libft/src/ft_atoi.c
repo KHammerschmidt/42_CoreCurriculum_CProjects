@@ -1,7 +1,6 @@
 #include "libft.h"
 
-/* The ft_atoi() function converts the initial portion of the string pointed
-to by 'str' to int representation. */
+/* Converts the initial portion of the string pointed to by 'str' to int representation. */
 int	ft_atoi(const char *str)
 {
 	int	i;

@@ -45,9 +45,8 @@ static char	*copy_digits(long b, int sign, int size)
 	return (str);
 }
 
-/* The ft_itoa() function allocates (with malloc(3)) and returns a string
-as the converted integer received as paramter. Returns the integer or NULL
-if the allocation fails. */
+/* Allocates and returns a string of the converted integer received as paramter.
+Returns the integer or NULL if the allocation fails. */
 char	*ft_itoa(int n)
 {
 	int		sign;

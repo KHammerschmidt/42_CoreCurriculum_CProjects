@@ -1,7 +1,6 @@
 #include "libft.h"
 
-/* The function ft_bzero() writes n zeroed bytes the the string s. It is used
-to set memory space to null values. */
+/* Writes n zeroed bytes the the string s. It is used to set memory space to null values. */
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
