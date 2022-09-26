@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: khammers <khammers@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/28 15:01:40 by khammers          #+#    #+#             */
-/*   Updated: 2022/08/04 10:47:31 by khammers         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "../header/libft.h"
 
 /* Allocates with malloc and returns a new element. The variable content is

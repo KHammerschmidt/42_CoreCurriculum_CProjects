@@ -4,6 +4,12 @@ CFLAGS		=	-Wall -Werror -Wextra -Iheader
 OBJ_DIR		=	./obj/
 SRC_DIR		=	./src/
 
+# COLORS - COM_COLOR=blue, OBJ_COLOR=green, ERROR_COLOR=red, WARN_COLOR=yellow
+COM_COLOR   = \033[0;34m
+OBJ_COLOR    = \033[0;32m
+ERROR_COLOR = \033[0;31m
+WARN_COLOR  = \033[0;33m
+
 SRC			=	ft_calloc.c		ft_bzero.c		ft_memset.c			\
 				ft_memcpy.c		ft_memmove.c	ft_memchr.c			\
 				ft_memcmp.c		ft_itoa.c		ft_atoi.c			\
@@ -27,12 +33,11 @@ BONUS_OBJ	= $(patsubst %.c,$(OBJ_DIR)%.o,$(BONUS_SRC))
 
 $(NAME): $(OBJ_DIR) $(OBJ)
 	@ar -crs $(NAME) $(OBJ)
-	@echo "creating: $(NAME)"
-	@echo "[√]"
+	@echo "$(COM_COLOR)...creating: $(NAME)" 
 
 $(OBJ_DIR):
 	@mkdir $(OBJ_DIR)
-	@echo "compiling $(NAME)-object-files"
+	@echo "$(OBJ_COLOR)...compiling $(NAME)-object-files"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -41,17 +46,17 @@ all: $(NAME)
 
 bonus: $(OBJ_DIR) $(OBJ) $(BONUS_OBJ)
 	@ar -rcs $(NAME) $(OBJ) $(BONUS_OBJ)
-	@echo "compiling $(NAME)-bonus-object-files"
-	@echo "[√]"
+	@echo "$(OBJ_COLOR)...compiling $(NAME)-bonus-object-files"
+	@echo "$(COM_COLOR)...creating: $(NAME)" 
 
 clean:
 	@rm -f $(OBJ) $(BONUS_OBJ)
 	@rm -rf $(OBJ_DIR)
-	@echo "$(NAME)-object-files deleted"
+	@echo "$(ERROR_COLOR)...$(NAME)-object-files deleted"
 
 fclean: clean
 	@rm -f $(NAME)
-	@rm -f $(BONUS_OBJ)
+	@echo "$(ERROR_COLOR)...$(NAME) deleted"
 
 re: fclean all
 
