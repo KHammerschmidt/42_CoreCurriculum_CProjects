@@ -13,3 +13,4 @@ Key learning points of this project were:
  To compile bonus functions use 'make bonus'.
 
 
+![Bildschirmfoto 2022-09-26 um 23 08 11](https://user-images.githubusercontent.com/80644370/192380864-609a3046-6b92-4367-a1a2-87f31d2c0afa.png)
