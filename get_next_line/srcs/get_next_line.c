@@ -1,30 +1,5 @@
 #include "../header/get_next_line.h"
 
-/* ft_calloc() allocates memory area and sets it to 0. */
-void	*ft_calloc(size_t count, size_t size)
-{
-	int		*ptr;
-	size_t	i;
-
-	i = 0;
-	ptr = malloc(count * size);
-	if (ptr == NULL)
-		return (0);
-	while (i < (count * size))
-	{
-		((char *)ptr)[i] = '\0';
-		i++;
-	}
-	return (ptr);
-}
-
-/* Function to free static char. */
-void	ft_free(char **char_stat)
-{
-	free(*char_stat);
-	*char_stat = NULL;
-}
-
 /* Differentiates between 
 (1) bytes != 0: the end of the file is not reached yet which returns
 ft_get_output(). 
