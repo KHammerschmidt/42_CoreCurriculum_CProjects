@@ -12,15 +12,16 @@ WARN_COLOR  = \033[0;33m
 #   VARIABLES                                                                  #
 # **************************************************************************** #
 NAME		=	libft.a
+
 CC			=	gcc
 CFLAGS		=	-Wall -Werror -Wextra
-DEPFLAGS	=	-MMD 
-# -MF $(DDIR)$*.d 
-# $(@.o=.d)
+DEPFLAGS	=	-MMD -MF $(DDIR)$*.d
+
 INCLUDES	=	./header/
-ODIR		=	./obj/
+
 SDIR		=	./src/
-DDIR		=	$(ODIR).deps
+ODIR		=	./obj/
+DDIR		=	$(ODIR)deps/
 
 SRCS		=	ft_calloc.c		ft_bzero.c		ft_memset.c			\
 				ft_memcpy.c		ft_memmove.c	ft_memchr.c			\
@@ -44,8 +45,7 @@ BONUS_SRCS	=	ft_lstnew.c						ft_lstadd_back.c	\
 OBJS		=	$(SRCS:%.c=$(ODIR)%.o)
 BONUS_OBJS	=	$(BONUS_SRCS:%.c=$(ODIR)%.o)
 HEADERS		=	$(INCLUDES)*.h
-# DEPS		=	$(INCLUDES) $(SRCS:%.c=$(DDIR)%.d)
-DEPS		= 	$(SRCS:%.c=$(DDIR)/%.d)
+DEPS		= 	$(SRCS:%.c=$(DDIR)%.d)
 
 # **************************************************************************** #
 #   RULES                                                                      #
@@ -55,11 +55,11 @@ DEPS		= 	$(SRCS:%.c=$(DDIR)/%.d)
 
 all: $(NAME)
 
-$(NAME):  $(ODIR) $(DDIR) $(OBJS) $(DEPS)
+$(NAME): $(ODIR) $(DDIR) $(OBJS) $(DEPS)
 	@ar -crs $(NAME) $(OBJS)
 	@echo "$(COM_COLOR)...creating: $(NAME)" 
 
-$(ODIR)%.o: $(SDIR)%.c $(DDIR)%.d
+$(ODIR)%.o: $(SDIR)%.c
 	@$(CC) $(CFLAGS) -I$(INCLUDES) $(DEPFLAGS) -c $< -o $@
 
 $(ODIR):
@@ -67,6 +67,7 @@ $(ODIR):
 	@mkdir -p $(ODIR)
 
 $(DDIR):
+	@echo "$(OBJ_COLOR)...creating dependency files"
 	@mkdir -p $(DDIR)
 
 bonus: $(ODIR) $(OBJS) $(BONUS_OBJS)
@@ -86,4 +87,4 @@ fclean: clean
 re: fclean all
 
 $(DEPS):
-include $(DEPS)
+-include $(DEPS)
