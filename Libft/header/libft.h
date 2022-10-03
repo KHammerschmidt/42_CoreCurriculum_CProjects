@@ -71,4 +71,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
+
+/* added function for get_next_line project */
+char	*ft_strnjoin(char *s1, char *s2, ssize_t bytes);
+void	ft_free(char **char_stat);
+
 #endif
