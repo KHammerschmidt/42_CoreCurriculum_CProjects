@@ -16,20 +16,23 @@ LIB			:=	libftprintf.a
 
 CC			:= 	gcc
 CFLAGS		:= 	-Wall -Werror -Wextra -Iheader
+DEPFLAGS	:=	-MMD -MF $(DDIR)$*.d
 
-ODIR		:= 	./obj/
-SDIR		:=	./srcs/
+SDIR		:=	srcs/
+ODIR		:= 	obj/
+DDIR		:=	$(ODIR)deps/
+
 LIBFT_DIR	:= 	../libft/
-
+LDLIBS		:=	$(LIBFT_DIR)libft.a
 
 SRCS 		:= 	main.c												\
 				ft_printf.c 	 			ft_conversion.c 		\
 				ft_print_char.c 			ft_print_string.c 		\
 				ft_print_hexa.c 			ft_print_int.c 			\
-				ft_print_unsigned_int.c 	ft_itoa_unsigned.c
+				ft_itoa_unsigned.c			ft_print_unsigned_int.c
 
 OBJS		:=	$(SRCS:%.c=$(ODIR)%.o)
-
+DEPS		:=	$(SRCS:%.c=$(DDIR)%.d)
 
 # **************************************************************************** #
 #   RULES                                                                      #
@@ -37,28 +40,32 @@ OBJS		:=	$(SRCS:%.c=$(ODIR)%.o)
 
 .PHONY: all clean fclean re
 
-$(NAME): $(LIB)
-	@$(CC) $(CFLAGS) -o $@ $(OBJS) $< ../libft/libft.a
-	@echo "$(WARN_COLOR)...creating executable $(NAME)"
+all: $(NAME)
 
-$(LIB): LIBFT $(ODIR) $(OBJS)
+$(NAME): $(LIB)
+	@$(CC) $(CFLAGS) -o $@ $(OBJS) $< $(LDLIBS)
+	@echo "$(WARN_COLOR)...build executable $(NAME)"
+
+$(LIB): LIBFT $(ODIR) $(DDIR) $(DEPS) $(OBJS)
 	@ar -rcs $(LIB) $(OBJS)
 	@echo "$(COM_COLOR)...creating: $(LIB)"
 
+$(ODIR)%.o: $(SDIR)%.c $(DDIR)%.d
+	@$(CC) $(CFLAGS) $(CPPFLAGS) $(DEPFLAGS) -c $< -o $@
+
 $(ODIR):
-	@mkdir $(ODIR)
+	@mkdir -p $(ODIR)
 	@echo "$(OBJ_COLOR)...compiling $(LIB)-object-files..."
 
-$(ODIR)%.o: $(SDIR)%.c
-	@$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
-
-all: $(NAME)
+$(DDIR):
+	@mkdir -p $(DDIR)
+	@echo "$(OBJ_COLOR)...creating dependency files..."
 
 LIBFT:
 	@make -C $(LIBFT_DIR)
 
 clean:
-	@rm -rf $(LIB) $(OBJS) $(ODIR)
+	@rm -rf $(LIB) $(OBJS) $(ODIR) $(DDIR)
 	@make clean -C $(LIBFT_DIR)
 	@echo "$(ERROR_COLOR)...$(LIB) & object files deleted"
 	@echo "$(ERROR_COLOR)...$(NAME) deleted"
@@ -68,3 +75,6 @@ fclean: clean
 	@make fclean -C $(LIBFT_DIR)
 
 re: fclean all
+
+$(DEPS):
+-include $(DEPS)
