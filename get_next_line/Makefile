@@ -1,51 +1,70 @@
-NAME			=		gnl
+# **************************************************************************** #
+#   COLORS                                                                     #
+#   COM_COLOR=blue, OBJ_COLOR=green, ERROR_COLOR=red, WARN_COLOR=yellow        #
+# **************************************************************************** #
+ERROR_COLOR = \033[0;31m
+OBJ_COLOR   = \033[0;32m
+WARN_COLOR  = \033[0;33m
+COM_COLOR   = \033[0;34m
 
-CC				=		gcc
-CFLAGS			=		-Wall -Werror -Wextra
-CFLAGS-1		=		-D BUFFER_SIZE=42
+# **************************************************************************** #
+#   VARIABLES                                                                  #
+# **************************************************************************** #
+NAME			:=		gnl
 
-OBJ_DIR			=		./obj/
-SRC_DIR			= 		./srcs/
+CC				:=		gcc
+CFLAGS			:=		-Wall -Werror -Wextra -Iheader
+CPPFLAGS		:=		-D BUFFER_SIZE=42
+DEPFLAGS		:=		-MMD -MF $(DDIR)$*.d
 
-# COLORS - COM_COLOR=blue, OBJ_COLOR=green, ERROR_COLOR=red, WARN_COLOR=yellow
-COM_COLOR   	= 		\033[0;34m
-OBJ_COLOR    	= 		\033[0;32m
-ERROR_COLOR 	= 		\033[0;31m
-WARN_COLOR  	= 		\033[0;33m
+SDIR			:= 		srcs/
+ODIR			:=		obj/
+DDIR			:=		$(ODIR)deps/
 
-SRC				=		main.c				get_next_line.c
+LIBFT_DIR		:=		../libft/
+LDLIBS			:=		$(LIBFT_DIR)libft.a
 
-OBJ				=		$(patsubst %.c,$(OBJ_DIR)%.o,$(SRC))
-INCLUDES		=		./header/get_next_line.h
-LIBFT_OBJ		=		../libft/obj/*.o
+SRCS			:=		main.c								\
+						get_next_line.c
+OBJS			:=		$(SRCS:%.c=$(ODIR)%.o)
+DEPS			:=		$(SRCS:%.c=$(DDIR)%.d)
+
+
+# **************************************************************************** #
+#   RULES                                                                      #
+# **************************************************************************** #
+
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
-$(NAME): $(OBJ_DIR) $(OBJ) $(INCLUDES) LIBFT_OBJECTS
-	@ $(CC) $(CFLAGS) $(CFLAGS-1) $(OBJ) $(LIBFT_OBJ) -o $@
+$(NAME): LIBFT $(ODIR) $(DDIR) $(DEPS) $(OBJS)
+	@ $(CC) $(CFLAGS) $(CPPFLAGS) $(DEPFLAGS) $(OBJS) -o $@ $(LDLIBS)
 	@echo "$(COM_COLOR)...creating: $(NAME)"
 
-$(OBJ_DIR):
-	@mkdir $(OBJ_DIR)
+$(ODIR):
+	@mkdir $@
 	@echo "$(OBJ_COLOR)...compiling $(NAME)-object-files..."
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	@$(CC) $(CFLAGS) $(CFLAGS-1) -c $< -o $@
+$(DDIR):
+	@mkdir -p $@
+	@echo "$(OBJ_COLOR)...creating dependencies..."
 
+$(ODIR)%.o: $(SDIR)%.c $(DDIR)%.d
+	@$(CC) $(CFLAGS) $(CPPFLAGS) $(DEPFLAGS) -c $< -o $@
 
-LIBFT_OBJECTS:
-	@make -C ../libft/
+LIBFT:
+	@make -C $(LIBFT_DIR)
 
 clean:
-	@rm -f $(OBJECTS)
-	@rm -rf $(OBJ_DIR)
-	@make clean -C ../libft/
+	@rm -rf $(OBJS) $(ODIR) $(DDIR)
+	@make clean -C $(LIBFT_DIR)
 	@echo "$(ERROR_COLOR)...$(NAME)-object files deleted"
 
 fclean: clean
-	@rm -f $(NAME)
-	@rm -f ../libft/libft.a
+	@rm -rf $(NAME) $(LDLIBS)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+$(DEPS):
+-include $(DEPS)
