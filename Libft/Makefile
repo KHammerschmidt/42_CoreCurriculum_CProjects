@@ -3,7 +3,7 @@
 #   COM_COLOR=blue, OBJ_COLOR=green, ERROR_COLOR=red, WARN_COLOR=yellow        #
 # **************************************************************************** #
 COM_COLOR   = \033[0;34m
-OBJ_COLOR    = \033[0;32m
+OBJ_COLOR   = \033[0;32m
 ERROR_COLOR = \033[0;31m
 WARN_COLOR  = \033[0;33m
 
