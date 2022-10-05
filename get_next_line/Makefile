@@ -2,10 +2,10 @@
 #   COLORS                                                                     #
 #   COM_COLOR=blue, OBJ_COLOR=green, ERROR_COLOR=red, WARN_COLOR=yellow        #
 # **************************************************************************** #
-ERROR_COLOR = \033[0;31m
-OBJ_COLOR   = \033[0;32m
-WARN_COLOR  = \033[0;33m
-COM_COLOR   = \033[0;34m
+ERROR_COLOR := \033[0;31m
+OBJ_COLOR   := \033[0;32m
+WARN_COLOR  := \033[0;33m
+COM_COLOR   := \033[0;34m
 
 # **************************************************************************** #
 #   VARIABLES                                                                  #
@@ -15,7 +15,7 @@ NAME			:=		gnl
 CC				:=		gcc
 CFLAGS			:=		-Wall -Werror -Wextra -Iheader
 CPPFLAGS		:=		-D BUFFER_SIZE=42
-DEPFLAGS		:=		-MMD -MF $(DDIR)$*.d
+DEPFLAGS		 =		-MMD -MF $(DDIR)$*.d
 
 SDIR			:= 		srcs/
 ODIR			:=		obj/
@@ -26,6 +26,7 @@ LDLIBS			:=		$(LIBFT_DIR)libft.a
 
 SRCS			:=		main.c								\
 						get_next_line.c
+
 OBJS			:=		$(SRCS:%.c=$(ODIR)%.o)
 DEPS			:=		$(SRCS:%.c=$(DDIR)%.d)
 

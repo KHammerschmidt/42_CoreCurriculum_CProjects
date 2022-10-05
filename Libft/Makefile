@@ -2,28 +2,28 @@
 #   COLORS                                                                     #
 #   COM_COLOR=blue, OBJ_COLOR=green, ERROR_COLOR=red, WARN_COLOR=yellow        #
 # **************************************************************************** #
-COM_COLOR   = \033[0;34m
-OBJ_COLOR   = \033[0;32m
-ERROR_COLOR = \033[0;31m
-WARN_COLOR  = \033[0;33m
+COM_COLOR   := \033[0;34m
+OBJ_COLOR   := \033[0;32m
+ERROR_COLOR := \033[0;31m
+WARN_COLOR  := \033[0;33m
 
 
 # **************************************************************************** #
 #   VARIABLES                                                                  #
 # **************************************************************************** #
-NAME		=	libft.a
+NAME		:=	libft.a
 
-CC			=	gcc
-CFLAGS		=	-Wall -Werror -Wextra
-DEPFLAGS	=	-MMD -MF $(DDIR)$*.d
+CC			:=	gcc
+CFLAGS		:=	-Wall -Werror -Wextra
+DEPFLAGS	 =	-MMD -MF $(DDIR)$*.d
 
-INCLUDES	=	./header/
+INCLUDES	:=	./header/
 
-SDIR		=	./src/
-ODIR		=	./obj/
-DDIR		=	$(ODIR)deps/
+SDIR		:=	./src/
+ODIR		:=	./obj/
+DDIR		:=	$(ODIR)deps/
 
-SRCS		=	ft_calloc.c		ft_bzero.c		ft_memset.c			\
+SRCS		:=	ft_calloc.c		ft_bzero.c		ft_memset.c			\
 				ft_memcpy.c		ft_memmove.c	ft_memchr.c			\
 				ft_memcmp.c		ft_itoa.c		ft_atoi.c			\
 				ft_strmapi.c	ft_striteri.c	ft_toupper.c		\
@@ -37,15 +37,15 @@ SRCS		=	ft_calloc.c		ft_bzero.c		ft_memset.c			\
 				ft_putnbr_fd.c	ft_putchar_fd.c	ft_strnjoin.c		\
 				ft_free.c
 
-BONUS_SRCS	=	ft_lstnew.c						ft_lstadd_back.c	\
+BONUS_SRCS	:=	ft_lstnew.c						ft_lstadd_back.c	\
 				ft_lstadd_front.c				ft_lstclear.c		\
 				ft_lstdelone.c					ft_lstiter.c		\
 				ft_lstlast.c					ft_lstsize.c
 
-OBJS		=	$(SRCS:%.c=$(ODIR)%.o)
-BONUS_OBJS	=	$(BONUS_SRCS:%.c=$(ODIR)%.o)
-HEADERS		=	$(INCLUDES)*.h
-DEPS		= 	$(SRCS:%.c=$(DDIR)%.d)
+OBJS		:=	$(SRCS:%.c=$(ODIR)%.o)
+BONUS_OBJS	:=	$(BONUS_SRCS:%.c=$(ODIR)%.o)
+HEADERS		:=	$(INCLUDES)*.h
+DEPS		:= 	$(SRCS:%.c=$(DDIR)%.d)
 
 # **************************************************************************** #
 #   RULES                                                                      #
