@@ -8,5 +8,6 @@ int	ft_isalnum(int c)
 		return (1);
 	else if (((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z')))
 		return (1);
-	return (0);
+	else
+		return (0);
 }

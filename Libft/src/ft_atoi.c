@@ -1,6 +1,7 @@
 #include "libft.h"
 
-/* Converts the initial portion of the string pointed to by 'str' to int representation. */
+/* Converts the initial portion of the string pointed to by 'str' to int representation. 
+Addes tests for int_min and int_max. */
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -21,9 +22,10 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	while ((str[i] >= '0') && (str[i] <= '9'))
-	{
-		result = result * 10 + str[i] - '0';
-		i++;
-	}
+		result = result * 10 + str[i++] - '0';
+
+	if (result * sign < -2147483648 || result * sign > 2147483647)
+		return (0);
+
 	return (result * sign);
 }

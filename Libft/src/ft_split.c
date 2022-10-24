@@ -47,10 +47,10 @@ char	**ft_split(char const *s, char c)
 	start = 0;
 	index = 0;
 	if (!s)
-		return (0);
+		return (NULL);
 	array = (char **)ft_calloc(sizeof(char *), (ft_counter((char *)s, c) + 1));
 	if (array == NULL)
-		return (0);
+		return (NULL);
 	while (s[start] != '\0')
 	{
 		while (s[start] == c && s[start] != '\0')

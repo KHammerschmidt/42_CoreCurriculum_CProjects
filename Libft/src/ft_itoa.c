@@ -12,9 +12,9 @@ static int	get_size(int long n, int sign)
 		size++;
 	}
 	if (sign == -1)
-		size = size + 2;
+		size += 2;
 	else if (sign == 1)
-		size = size + 1;
+		size += 1;
 	return (size);
 }
 

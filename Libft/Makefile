@@ -40,7 +40,8 @@ SRCS		:=	ft_calloc.c		ft_bzero.c		ft_memset.c			\
 BONUS_SRCS	:=	ft_lstnew.c						ft_lstadd_back.c	\
 				ft_lstadd_front.c				ft_lstclear.c		\
 				ft_lstdelone.c					ft_lstiter.c		\
-				ft_lstlast.c					ft_lstsize.c
+				ft_lstlast.c					ft_lstsize.c		\
+				ft_lstnew_push_back.c
 
 OBJS		:=	$(SRCS:%.c=$(ODIR)%.o)
 BONUS_OBJS	:=	$(BONUS_SRCS:%.c=$(ODIR)%.o)
