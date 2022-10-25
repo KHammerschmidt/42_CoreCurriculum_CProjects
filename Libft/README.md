@@ -7,7 +7,7 @@
 </p>
 
 ## 💡 About the project
-> The aim of this project is to code re-code a library with standard functions of the C library libc as well as utility and bonus functions
+> The aim of this project is to re-code a library with standard functions of the C library ``` libc ``` as well as utility and bonus functions
 
 **Key learning points**
   - Handling different variable types and memory allocation
