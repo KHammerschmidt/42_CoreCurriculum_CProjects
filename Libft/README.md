@@ -50,7 +50,6 @@
 * [`ft_strnstr`](./src/ft_strnstr.c) - locates a substring in a string
 * [`ft_strdup`](./src/ft_strdup.c) - saves a copy of a string
 * [`ft_atoi`](./src/ft_atoi.c) - converts a string to integer representation
-<br/>
 
 ### **Utility functions**
 * [`ft_substr`](./src/ft_substr.c) - returns a substring from string
@@ -60,7 +59,6 @@
 * [`ft_itoa`](./src/ft_itoa.c) - allocates and returns a string of an integer
 * [`ft_strmapi`](./src/ft_strmapi.c) - creates new string resulting from successive application of function to each character 
 * [`ft_striteri`](./src/ft_striteri.c) - applies a function to each character of a string
-<br/>
 
 ### **Bonus functions**
 * [`ft_lstnew`](./src/ft_lstnew.c) - allocates a new initialised list element 
@@ -71,7 +69,6 @@
 * [`ft_lstdelone`](./src/ft_lstdelone.c) - frees an element's content and elemente itself
 * [`ft_lstclear`](./src/ft_lstclear.c) - deletes and frees the given element and every successor
 * [`ft_lstiter`](./src/ft_lstiter.c) - iterates list and applies function to elements
-<br/>
 
 ### Added functions for usability in later projects
 * [`ft_free`](./src/ft_free.c) - Frees a strings' memory and sets it to NULL
