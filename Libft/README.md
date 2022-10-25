@@ -25,15 +25,15 @@
 
 ## List of functions
 
-### Libc functions
-#### Character type testing
+### **Libc functions**
+##### Character type testing
 * [`ft_isalpha`](./src/ft_isalpha.c) - tests for alphabetic character
 * [`ft_isdigit`](./src/ft_isdigit.c) - tests for decimal-digit character
 * [`ft_isalnum`](./src/ft_isalnum) - tests for alphanumeric character
 * [`ft_isascii`](./src/ft_isascii) - tests for ASCII character
 * [`ft_isprint`](./src/ft_isprint) - tests for printable characters
 
-#### Printing utils
+##### Printing utils
 * [`ft_toupper`](./src/ft_toupper.c) - converts lower case to upper case
 * [`ft_tolower`](./src/ft_tolower.c) - converts upper case to lower case
 * [`ft_putchar_fd`](./src/ft_putchar_fd.c) - writes one character to given file descriptor
@@ -41,14 +41,14 @@
 * [`ft_putendl_fd`](./src/ft_putendl_fd.c) - writes a string and newline to the given file descriptor 
 * [`ft_putnbr_fd`](./src/ft_putnbr_fd.c) - writes an integer to the given file descriptor
 
-#### Memory area manipulation
+##### Memory area manipulation
 * [`ft_memset`](./src/ft_memset.c) - writes a byte to a byte string
 * [`ft_memmove`](./src/ft_memmove.c) - copies bytes from string to another
 * [`ft_memcpy`](./src/ft_memcpy.c) - copies bytes from src to dst memory area
 * [`ft_memchr`](./src/ft_memchr.c) - locates first occurence of byte in byte string
 * [`ft_memcmp`](./src/ft_memcmp.c) - compares two byte strings
 
-#### Memory allocation
+##### Memory allocation
 * [`ft_bzero`](./src/ft_bzero.c) - writes zeroed butes to a string 
 * [`ft_calloc`](./src/ft_calloc.c) - allocates memory and fills it with zeroed 
 
@@ -64,7 +64,7 @@
 * [`ft_atoi`](./src/ft_atoi.c) - converts a string to integer representation
 <br/>
 
-### Utility functions
+### **Utility functions**
 * [`ft_substr`](./src/ft_substr.c) - returns a substring from string
 * [`ft_strjoin`](./src/ft_strjoin.c) - concatenates two strings
 * [`ft_strtrim`](./src/ft_strtrim.c) - trims a string in regards to a reference set
@@ -74,7 +74,7 @@
 * [`ft_striteri`](./src/ft_striteri.c) - applies a function to each character of a string
 <br/>
 
-### Bonus functions
+### **Bonus functions**
 * [`ft_lstnew`](./src/ft_lstnew.c) - allocates a new initialised list element 
 * [`ft_lstadd_front`](./src/ft_lstadd_front.c) - adds an element to the beginning of a list
 * [`ft_lstsize`](./src/ft_lstsize.c) - returns number of elements in list
