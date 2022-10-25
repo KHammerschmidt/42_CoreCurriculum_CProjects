@@ -60,7 +60,7 @@
 * [`ft_strmapi`](./src/ft_strmapi.c) - creates new string resulting from successive application of function to each character 
 * [`ft_striteri`](./src/ft_striteri.c) - applies a function to each character of a string
 
-### **Bonus functions**
+### **Bonus functions - linked lists**
 * [`ft_lstnew`](./src/ft_lstnew.c) - allocates a new initialised list element 
 * [`ft_lstadd_front`](./src/ft_lstadd_front.c) - adds an element to the beginning of a list
 * [`ft_lstsize`](./src/ft_lstsize.c) - returns number of elements in list
