@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-	<b><i>Development repo of my very own standard libraryYOUR VERY FIRST OWN LIBRARY</i></b><br>
+	<b><i>Development repo of my very own standard library</i></b><br>
 </p>
 
 <h3 align="center">
@@ -15,7 +15,7 @@
 </h3>
 
 ## 💡 About the project
-The aim of this project is to code re-code a library with standard functions of the C library libc as well as utility and bonus functions
+> The aim of this project is to code re-code a library with standard functions of the C library libc as well as utility and bonus functions
 
 **Key learning points**
   - Handling different variable types and memory allocation
@@ -89,8 +89,8 @@ The aim of this project is to code re-code a library with standard functions of 
 
 ## 🛠️ **Usage**
 
-To compile the library use the command 'make'.
-To compile bonus functions use 'make bonus'.
+To compile the library use the command  ``` make ```
+To compile bonus functions use ``` make bonus ```
  
 ![Bildschirmfoto 2022-09-26 um 23 08 11](https://user-images.githubusercontent.com/80644370/192380864-609a3046-6b92-4367-a1a2-87f31d2c0afa.png)
 
