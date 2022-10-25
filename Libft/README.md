@@ -28,24 +28,33 @@
 
 ### Libc functions
 
+#### Character type testing
 * [`ft_isalpha`](./src/ft_isalpha.c) - tests for alphabetic character
 * [`ft_isdigit`](./src/ft_isdigit.c) - tests for decimal-digit character
 * [`ft_isalnum`](./src/ft_isalnum) - tests for alphanumeric character
 * [`ft_isascii`](./src/ft_isascii) - tests for ASCII character
 * [`ft_isprint`](./src/ft_isprint) - tests for printable characters
+
+#### Printing utils
 * [`ft_toupper`](./src/ft_toupper.c) - converts lower case to upper case
 * [`ft_tolower`](./src/ft_tolower.c) - converts upper case to lower case
+* [`ft_putchar_fd`](./src/ft_putchar_fd.c) - writes one character to given file descriptor
+* [`ft_putstr_fd`](./src/ft_putstr_fd.c) - writes a string to the given file descriptor
+* [`ft_putendl_fd`](./src/ft_putendl_fd.c) - writes a string and newline to the given file descriptor 
+* [`ft_putnbr_fd`](./src/ft_putnbr_fd.c) - writes an integer to the given file descriptor
 
+#### Memory area manipulation
 * [`ft_memset`](./src/ft_memset.c) - writes a byte to a byte string
 * [`ft_memmove`](./src/ft_memmove.c) - copies bytes from string to another
 * [`ft_memcpy`](./src/ft_memcpy.c) - copies bytes from src to dst memory area
 * [`ft_memchr`](./src/ft_memchr.c) - locates first occurence of byte in byte string
 * [`ft_memcmp`](./src/ft_memcmp.c) - compares two byte strings
 
+#### Memory allocation
 * [`ft_bzero`](./src/ft_bzero.c) - writes zeroed butes to a string 
 * [`ft_calloc`](./src/ft_calloc.c) - allocates memory and fills it with zeroed 
-* [`ft_atoi`](./src/ft_atoi.c) - converts a string to integer representation
 
+##### String manipulation
 * [`ft_strlen`](./src/ft_strlen) - returns the length of a string
 * [`ft_strlcpy`](./src/ft_strlcpy.c) - size-bound string copying
 * [`ft_strlcat`](./src/ft_strlcat.c) - appends string src to string dst 
@@ -54,6 +63,7 @@
 * [`ft_strncmp`](./src/ft_strncmp.c) - compares lexicographically two strings
 * [`ft_strnstr`](./src/ft_strnstr.c) - locates a substring in a string
 * [`ft_strdup`](./src/ft_strdup.c) - saves a copy of a string
+* [`ft_atoi`](./src/ft_atoi.c) - converts a string to integer representation
 
 ### Utility functions
 
@@ -64,11 +74,6 @@
 * [`ft_itoa`](./src/ft_itoa.c) - allocates and returns a string of an integer
 * [`ft_strmapi`](./src/ft_strmapi.c) - creates new string resulting from successive application of function to each character 
 * [`ft_striteri`](./src/ft_striteri.c) - applies a function to each character of a string
-
-* [`ft_putchar_fd`](./src/ft_putchar_fd.c) - writes one character to given file descriptor
-* [`ft_putstr_fd`](./src/ft_putstr_fd.c) - writes a string to the given file descriptor
-* [`ft_putendl_fd`](./src/ft_putendl_fd.c) - writes a string and newline to the given file descriptor 
-* [`ft_putnbr_fd`](./src/ft_putnbr_fd.c) - writes an integer to the given file descriptor
 
 
 ### Bonus functions
