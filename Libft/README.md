@@ -6,14 +6,6 @@
 	<b><i>Development repo of my very own standard library</i></b><br>
 </p>
 
-<h3 align="center">
-	<a href="#%EF%B8%8F-about">About</a>
-	<span> · </span>
-	<a href="#%EF%B8%8F-list">List of functions</a>
-	<span> · </span>
-	<a href="#-usage">Usage</a>
-</h3>
-
 ## 💡 About the project
 > The aim of this project is to code re-code a library with standard functions of the C library libc as well as utility and bonus functions
 
