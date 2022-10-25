@@ -9,9 +9,9 @@
 <h3 align="center">
 	<a href="#%EF%B8%8F-about">About</a>
 	<span> · </span>
-	<a href="#%EF%B8%8F-usage">List of functions</a>
+	<a href="#%EF%B8%8F-list-of-functions">List of functions</a>
 	<span> · </span>
-	<a href="#-testing">Usage</a>
+	<a href="#-usage">Usage</a>
 </h3>
 
 ## 💡 About the project
