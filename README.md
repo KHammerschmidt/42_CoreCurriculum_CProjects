@@ -8,7 +8,7 @@
 ---
 ## 💡  About the core curriculum @ 42Heilbronn
 
-> 42Heilbronn's core curriculum aims to cover a lot of basics. The projects presented in this repository are all written in C and tackle basic C programming, such as developing programs using classic algorithms, discovering the file system and learning UNIX process management. 
+> The core curriculum of the programming school 42Heilbronn aims to cover a lot of programming basics. The projects presented in this repository are all written in C and tackle basic C programming, such as developing programs using classic algorithms, discovering the file system and learning UNIX process management. In addition, there are graphic projects included which run with 42's graphic library minilibx.
 <br>
 
 ## **List of projects**
