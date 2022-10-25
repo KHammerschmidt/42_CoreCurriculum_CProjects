@@ -32,7 +32,6 @@
 * [`ft_isalnum`](./src/ft_isalnum) - tests for alphanumeric character
 * [`ft_isascii`](./src/ft_isascii) - tests for ASCII character
 * [`ft_isprint`](./src/ft_isprint) - tests for printable characters
-
 ##### Printing utils
 * [`ft_toupper`](./src/ft_toupper.c) - converts lower case to upper case
 * [`ft_tolower`](./src/ft_tolower.c) - converts upper case to lower case
@@ -40,18 +39,15 @@
 * [`ft_putstr_fd`](./src/ft_putstr_fd.c) - writes a string to the given file descriptor
 * [`ft_putendl_fd`](./src/ft_putendl_fd.c) - writes a string and newline to the given file descriptor 
 * [`ft_putnbr_fd`](./src/ft_putnbr_fd.c) - writes an integer to the given file descriptor
-
 ##### Memory area manipulation
 * [`ft_memset`](./src/ft_memset.c) - writes a byte to a byte string
 * [`ft_memmove`](./src/ft_memmove.c) - copies bytes from string to another
 * [`ft_memcpy`](./src/ft_memcpy.c) - copies bytes from src to dst memory area
 * [`ft_memchr`](./src/ft_memchr.c) - locates first occurence of byte in byte string
 * [`ft_memcmp`](./src/ft_memcmp.c) - compares two byte strings
-
 ##### Memory allocation
 * [`ft_bzero`](./src/ft_bzero.c) - writes zeroed butes to a string 
 * [`ft_calloc`](./src/ft_calloc.c) - allocates memory and fills it with zeroed 
-
 ##### String manipulation
 * [`ft_strlen`](./src/ft_strlen) - returns the length of a string
 * [`ft_strlcpy`](./src/ft_strlcpy.c) - size-bound string copying
