@@ -25,6 +25,7 @@
 
 ## List of functions
 
+
 ### Libc functions
 
 * [`ft_isalpha`](./src/ft_isalpha.c) - tests for alphabetic character
@@ -55,6 +56,7 @@
 * [`ft_strdup`](./src/ft_strdup.c) - saves a copy of a string
 
 ### Utility functions
+
 * [`ft_substr`](./src/ft_substr.c) - returns a substring from string
 * [`ft_strjoin`](./src/ft_strjoin.c) - concatenates two strings
 * [`ft_strtrim`](./src/ft_strtrim.c) - trims a string in regards to a reference set
@@ -67,6 +69,7 @@
 * [`ft_putstr_fd`](./src/ft_putstr_fd.c) - writes a string to the given file descriptor
 * [`ft_putendl_fd`](./src/ft_putendl_fd.c) - writes a string and newline to the given file descriptor 
 * [`ft_putnbr_fd`](./src/ft_putnbr_fd.c) - writes an integer to the given file descriptor
+
 
 ### Bonus functions
 
