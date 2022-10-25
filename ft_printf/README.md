@@ -7,7 +7,9 @@
 </p>
 
 ## 💡 About the project
-> The aim of this project is to re-code ``` libc ```'s printf function with the following conversions 'c', 's', 'p', 'd', 'i', 'u', 'x', 'X' and '%'.
+> The aim of this project is to re-code ``` libc ```'s printf function with the conversions:<br/>
+'c', 's', 'p', 'd', 'i', 'u', 'x', 'X' and '%'.
+<br/>
 
 **Key learning points**
   - Handling variadic arguments
@@ -29,10 +31,6 @@
 
 
 ## 🛠️ **Usage**
-
-To compile the library use the command  ``` make ``` <br/>
-To compile bonus functions use ``` make bonus ``` <br/>
- 
  Use: To compile library libftprintf.a and build the executable ft_printf use the command ``` make ``` <br/>
  Libft project is required for compilation.
  
