@@ -1,9 +1,9 @@
 #include "../header/push_swap.h"
 
 /* Frees every element of a list pointed to by the stack's head. */
-void	ft_free_lst(t_list **stack_head)
+void	ft_free_lst(t_list1 **stack_head)
 {
-	t_list	*tmp;
+	t_list1	*tmp;
 
 	tmp = *stack_head;
 	while (tmp)

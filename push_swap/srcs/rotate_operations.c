@@ -2,10 +2,10 @@
 
 /* Shift up all elements of stack a by 1. The first element becomes the last
 one. */
-void	ra(t_list **head_a, int flag)
+void	ra(t_list1 **head_a, int flag)
 {
-	t_list	*last_element;
-	t_list	*tmp;
+	t_list1	*last_element;
+	t_list1	*tmp;
 
 	if (*head_a == NULL)
 		return ;
@@ -22,10 +22,10 @@ void	ra(t_list **head_a, int flag)
 
 /* Shift up all elements of stack b by 1. The first element becomes the
 last one. */
-void	rb(t_list **head_b, int flag)
+void	rb(t_list1 **head_b, int flag)
 {
-	t_list	*last_element;
-	t_list	*tmp;
+	t_list1	*last_element;
+	t_list1	*tmp;
 
 	if (*head_b == NULL)
 		return ;
@@ -41,7 +41,7 @@ void	rb(t_list **head_b, int flag)
 }
 
 /* ra and rb at the same time. */
-void	rr(t_list **head_a, t_list **head_b)
+void	rr(t_list1 **head_a, t_list1 **head_b)
 {
 	ra(head_a, 0);
 	rb(head_b, 0);

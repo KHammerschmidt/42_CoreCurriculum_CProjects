@@ -1,9 +1,9 @@
 #include "../header/push_swap.h"
 
 /* Finds the smallest number by its id and returns the id. */
-int	find_smallest(t_list **head)
+int	find_smallest(t_list1 **head)
 {
-	t_list	*node;
+	t_list1	*node;
 	int		min;
 
 	if (!*head)
@@ -20,9 +20,9 @@ int	find_smallest(t_list **head)
 }
 
 /* Finds the largest number by its id and returns the id. */
-int	find_largest(t_list **head)
+int	find_largest(t_list1 **head)
 {
-	t_list	*node;
+	t_list1	*node;
 	int		max;
 
 	if (!*head)
@@ -38,9 +38,9 @@ int	find_largest(t_list **head)
 	return (max);
 }
 
-void	push_smallest(t_list **head_src, t_list **head_dst)
+void	push_smallest(t_list1 **head_src, t_list1 **head_dst)
 {
-	t_list	*tmp;
+	t_list1	*tmp;
 	int		i;
 
 	i = 0;
@@ -50,11 +50,11 @@ void	push_smallest(t_list **head_src, t_list **head_dst)
 		tmp = tmp->next;
 		i++;
 	}
-	if (ft_lstsize(*head_src) == 1)
+	if (ft_lstsize_push_swap(*head_src) == 1)
 		pb(head_src, head_dst);
-	if (i >= (ft_lstsize(*head_src) / 2))
+	if (i >= (ft_lstsize_push_swap(*head_src) / 2))
 	{
-		while (i++ != ft_lstsize(*head_src))
+		while (i++ != ft_lstsize_push_swap(*head_src))
 			rra(head_src, 1);
 	}
 	else
@@ -66,9 +66,9 @@ void	push_smallest(t_list **head_src, t_list **head_dst)
 }
 
 /* Largest number of a stack is being pushed to the other one. */
-void	push_largest(t_list **head_a, t_list **head_b)
+void	push_largest(t_list1 **head_a, t_list1 **head_b)
 {
-	t_list	*tmp;
+	t_list1	*tmp;
 	int		i;
 
 	i = 0;
@@ -81,9 +81,9 @@ void	push_largest(t_list **head_a, t_list **head_b)
 	}
 	while (tmp->index != find_largest(head_b) && i++)
 		tmp = tmp->next;
-	if (i >= (ft_lstsize(*head_b) / 2))
+	if (i >= (ft_lstsize_push_swap(*head_b) / 2))
 	{
-		while (i++ != ft_lstsize(*head_b))
+		while (i++ != ft_lstsize_push_swap(*head_b))
 			rrb(head_b, 1);
 	}
 	else
@@ -96,14 +96,14 @@ void	push_largest(t_list **head_a, t_list **head_b)
 
 /* Checks if the stack is already sorted, if so returns 1
 otherwise 0. */
-int	is_sorted(t_list **head_a)
+int	is_sorted(t_list1 **head_a)
 {
-	t_list	*tmp;
+	t_list1	*tmp;
 	int		len;
 	int		i;
 
 	i = 0;
-	len = ft_lstsize(*head_a);
+	len = ft_lstsize_push_swap(*head_a);
 	if (!*head_a)
 		return (-1);
 	tmp = *head_a;

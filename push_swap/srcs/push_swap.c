@@ -2,11 +2,11 @@
 
 /* Calls the respective sorting algorithm in relation to the number of
 testcases. */
-int	push_swap(t_list **head_a, t_list **head_b)
+int	push_swap(t_list1 **head_a, t_list1 **head_b)
 {
 	int	len;
 
-	len = ft_lstsize(*head_a);
+	len = ft_lstsize_push_swap(*head_a);
 	if (len == 2)
 		sa(head_a, 1);
 	else if (len == 3)
@@ -20,8 +20,8 @@ int	push_swap(t_list **head_a, t_list **head_b)
 
 int	main(int argc, char *argv[])
 {
-	t_list	*head_a;
-	t_list	*head_b;
+	t_list1	*head_a;
+	t_list1	*head_b;
 
 	head_a = NULL;
 	head_b = NULL;

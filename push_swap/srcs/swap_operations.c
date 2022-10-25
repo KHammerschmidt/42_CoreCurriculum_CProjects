@@ -2,7 +2,7 @@
 
 /* Swap the first elements at the top of stack a. Do nothing if there is only
 one or no elements. */
-void	sa(t_list **head_a, int flag)
+void	sa(t_list1 **head_a, int flag)
 {
 	int		tmp;
 
@@ -17,7 +17,7 @@ void	sa(t_list **head_a, int flag)
 
 /* Swap the first 2 elements at the top of stack b. Do nothing if there is
 only one or no elements. */
-void	sb(t_list **head_b, int flag)
+void	sb(t_list1 **head_b, int flag)
 {
 	int		tmp;
 
@@ -31,7 +31,7 @@ void	sb(t_list **head_b, int flag)
 }
 
 /* Swap sa and sb at the same time. */
-void	ss(t_list **head_a, t_list **head_b)
+void	ss(t_list1 **head_a, t_list1 **head_b)
 {
 	sa(head_a, 0);
 	sb(head_b, 0);

@@ -1,15 +1,15 @@
 #include "../header/push_swap.h"
 
 /* Checks if input holds any duplicate numbers. */
-static int	check_dups(t_list **head_a, char *str)
+static int	check_dups(t_list1 **head_a, char *str)
 {
 	int		num;
 	int		len;
 	int		i;
-	t_list	*tmp_node;
+	t_list1	*tmp_node;
 
 	i = 0;
-	len = ft_lstsize(*head_a);
+	len = ft_lstsize_push_swap(*head_a);
 	if (len <= 1)
 		return (-1);
 	num = ft_atoi(str);
@@ -50,7 +50,7 @@ static int	ft_isint(char *str)
 }
 
 /* Checks if input is of type int or if any duplicates were detected. */
-int	error_handling(char *str, t_list **head_a)
+int	error_handling(char *str, t_list1 **head_a)
 {
 	int	i;
 

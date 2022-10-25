@@ -10,6 +10,7 @@
 typedef struct s_list
 {
 	void			*content;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 
@@ -63,7 +64,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 /* Bonus functions: Functions to manipulate linked lists */
 t_list	*ft_lstnew(void *content);
-t_list	*ft_lstnew_push_swap(int content);
 t_list	*ft_lstlast(t_list *lst);
 int		ft_lstsize(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);

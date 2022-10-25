@@ -2,9 +2,9 @@
 
 /* Sets an index for the element's content in comparison to the already
 existing elements of the list. */
-void	ft_get_indx(t_list *node, t_list **head_a)
+void	ft_get_indx(t_list1 *node, t_list1 **head_a)
 {
-	t_list	*tmp;
+	t_list1	*tmp;
 
 	if (!*head_a)
 		return ;
@@ -22,12 +22,12 @@ void	ft_get_indx(t_list *node, t_list **head_a)
 /* Splits the cmd line input and checks if it is valid. If yes, create
 a new node, adds it to the end of stack a and sets an index for the
 node's content. */
-int	init_stack_a(char *argv[], t_list **head_a)
+int	init_stack_a(char *argv[], t_list1 **head_a)
 {
 	int		i;
 	int		j;
 	char	**str;
-	t_list	*node;
+	t_list1	*node;
 
 	i = 1;
 	while (argv[i])
@@ -37,8 +37,8 @@ int	init_stack_a(char *argv[], t_list **head_a)
 		while (str[j])
 		{
 			error_handling(str[j], head_a);
-			node = ft_lstnew(ft_atoi(str[j]));
-			ft_lstadd_back(head_a, node);
+			node = ft_lstnew_push_swap(ft_atoi(str[j]));
+			ft_lstadd_back_push_swap(head_a, node);
 			ft_get_indx(node, head_a);
 			j++;
 		}

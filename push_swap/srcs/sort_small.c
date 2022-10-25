@@ -1,8 +1,8 @@
 #include "../header/push_swap.h"
 
-void	ft_sort_three(t_list **head_a)
+void	ft_sort_three(t_list1 **head_a)
 {
-	t_list	*node;
+	t_list1	*node;
 
 	node = *head_a;
 	if (node->index == find_smallest(head_a))
@@ -29,10 +29,10 @@ void	ft_sort_three(t_list **head_a)
 	}
 }
 
-void	ft_sort_five(t_list **head_a, t_list **head_b)
+void	ft_sort_five(t_list1 **head_a, t_list1 **head_b)
 {
-	t_list	*tmp_a;
-	t_list	*tmp_b;
+	t_list1	*tmp_a;
+	t_list1	*tmp_b;
 	int		i;
 
 	i = 0;
