@@ -8,9 +8,10 @@
 ---
 ## 💡  About the core curriculum @ 42Heilbronn
 
-> 42Heilbronn's core curriculum aims to cover a lot of basics. The projects presented in this repository are all written in C and tackle basic C programminga s well as developing programs using classic algorithms, discovering the file system and learning UNIX process management. 
+> 42Heilbronn's core curriculum aims to cover a lot of basics. The projects presented in this repository are all written in C and tackle basic C programming, such as developing programs using classic algorithms, discovering the file system and learning UNIX process management. 
 <br>
-## List of projects
+
+## **List of projects**
 
 * [`libft`](./Libft)			- re-coding my own library of standard and utility functions
 * [`ft_printf`](./ft_printf) 	- recoding libc's printf function with several conversions
