@@ -13,8 +13,9 @@
 
 ## **List of projects**
 
-* [`libft`](./Libft) ---------------- re-coding my own library of standard and utility functions
-* [`ft_printf`](./ft_printf) -------- recoding libc's printf function with several conversions
-* [`get_next_line`](./get_next_line) - reading one line from a file with varying buffer sizes.
-* [`push_swap`](./push_swap) --------- sorting numbers on a stack with minimal push swap instructions
-<br>
+| Project								| Description
+| --------------------------------------|--------------------------------------------------------| 
+| * [`libft`](./Libft) 					| - re-coding my own library of standard and utility functions
+| * [`ft_printf`](./ft_printf) 			| - recoding libc's printf function with several conversions
+| * [`get_next_line`](./get_next_line) 	| - reading one line from a file with varying buffer sizes.
+| * [`push_swap`](./push_swap) 			| - sorting numbers on a stack with minimal push swap instructions
