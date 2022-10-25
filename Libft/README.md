@@ -25,9 +25,7 @@
 
 ## List of functions
 
-
 ### Libc functions
-
 #### Character type testing
 * [`ft_isalpha`](./src/ft_isalpha.c) - tests for alphabetic character
 * [`ft_isdigit`](./src/ft_isdigit.c) - tests for decimal-digit character
@@ -64,9 +62,9 @@
 * [`ft_strnstr`](./src/ft_strnstr.c) - locates a substring in a string
 * [`ft_strdup`](./src/ft_strdup.c) - saves a copy of a string
 * [`ft_atoi`](./src/ft_atoi.c) - converts a string to integer representation
+<br/>
 
 ### Utility functions
-
 * [`ft_substr`](./src/ft_substr.c) - returns a substring from string
 * [`ft_strjoin`](./src/ft_strjoin.c) - concatenates two strings
 * [`ft_strtrim`](./src/ft_strtrim.c) - trims a string in regards to a reference set
@@ -74,10 +72,9 @@
 * [`ft_itoa`](./src/ft_itoa.c) - allocates and returns a string of an integer
 * [`ft_strmapi`](./src/ft_strmapi.c) - creates new string resulting from successive application of function to each character 
 * [`ft_striteri`](./src/ft_striteri.c) - applies a function to each character of a string
-
+<br/>
 
 ### Bonus functions
-
 * [`ft_lstnew`](./src/ft_lstnew.c) - allocates a new initialised list element 
 * [`ft_lstadd_front`](./src/ft_lstadd_front.c) - adds an element to the beginning of a list
 * [`ft_lstsize`](./src/ft_lstsize.c) - returns number of elements in list
@@ -86,19 +83,17 @@
 * [`ft_lstdelone`](./src/ft_lstdelone.c) - frees an element's content and elemente itself
 * [`ft_lstclear`](./src/ft_lstclear.c) - deletes and frees the given element and every successor
 * [`ft_lstiter`](./src/ft_lstiter.c) - iterates list and applies function to elements
-* [`ft_lstmap`](./src/ft_lstmap.c) -
-
+<br/>
 
 ### Added functions for usability in later projects
-
 * [`ft_free`](./src/ft_free.c) - Frees a strings' memory and sets it to NULL
 * [`ft_strnjoin`](./src/ft_strjoin.c) - concatenates two strings but no more than set bytes
 
 
 ## 🛠️ **Usage**
 
-To compile the library use the command  ``` make ```
-To compile bonus functions use ``` make bonus ```
+To compile the library use the command  ``` make ``` <br/>
+To compile bonus functions use ``` make bonus ``` <br/>
  
 ![Bildschirmfoto 2022-09-26 um 23 08 11](https://user-images.githubusercontent.com/80644370/192380864-609a3046-6b92-4367-a1a2-87f31d2c0afa.png)
 
