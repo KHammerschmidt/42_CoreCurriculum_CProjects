@@ -18,7 +18,6 @@
 ## **List of projects**
 
 | Project name	  | Description														 | Score
-|-----------------|------------------------------------------------------------------|------------------| 
 |:----------------|:-----------------------------------------------------------------|:----------------:|
 | **[`libft`](./Libft)** 					| re-coding my own library of standard and utility functions 	 | [![khammers's 42 Libft Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2202131)](https://github.com/JaeSeoKim/badge42)					|
 | **[`ft_printf`](./ft_printf)** 			| recoding libc's printf function with several conversions	 	 | [![khammers's 42 ft_printf Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2280437)](https://github.com/JaeSeoKim/badge42)				|
