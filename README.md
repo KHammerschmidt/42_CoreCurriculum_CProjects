@@ -17,7 +17,7 @@
 
 ## **List of projects**
 
-| Project name							| Description														 | Score
+| :Project name							| :Description														 | :Score:
 | --------------------------------------|--------------------------------------------------------------------|------------------| 
 | :---        							|    :---   														 | :----: 			|
 | **[`libft`](./Libft)** 					| re-coding my own library of standard and utility functions 	 | [![khammers's 42 Libft Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2202131)](https://github.com/JaeSeoKim/badge42)					|
