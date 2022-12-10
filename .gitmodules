@@ -7,3 +7,6 @@
 [submodule "42cursus-get_next_line"]
 	path = 42cursus-get_next_line
 	url = https://github.com/KHammerschmidt/42cursus-get_next_line
+[submodule "42cursus-Libft]
+	path = 42cursus-Libft
+	url = https://github.com/KHammerschmidt/42cursus-Libft
