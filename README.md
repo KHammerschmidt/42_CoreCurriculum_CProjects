@@ -19,7 +19,7 @@
 
 | Project name	  | Description														 | Score
 |:----------------|:-----------------------------------------------------------------|:----------------:|
-| **[`libft`](https://github.com/KHammerschmidt/42cursus-Libft)** 					| re-coding my own library of standard and utility functions 	 | [![khammers's 42 Libft Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2202131)](https://github.com/JaeSeoKim/badge42)					|
+| **[`libft`](https://github.com/KHammerschmidt/42cursus-Libft)**					| re-coding my own library of standard and utility functions 	 | [![khammers's 42 Libft Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2202131)](https://github.com/JaeSeoKim/badge42)					|
 | **[`ft_printf`](https://github.com/KHammerschmidt/42cursus-ft_printf)** 			| recoding libc's printf function with several conversions	 	 | [![khammers's 42 ft_printf Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2280437)](https://github.com/JaeSeoKim/badge42)				|
 | **[`get_next_line`](https://github.com/KHammerschmidt/42cursus-get_next_line)** 	| reading one line from a file with varying buffer sizes	 	 | [![khammers's 42 get_next_line Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2284509)](https://github.com/JaeSeoKim/badge42)					|
 | **[`push_swap`](./push_swap)** 			| sorting numbers on a stack with minimal push swap instructions | [![khammers's 42 push_swap Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2402737)](https://github.com/JaeSeoKim/badge42)					|
