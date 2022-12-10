@@ -1,4 +1,4 @@
-[submodule "42cursus-libft"]
+[submodule "42cursus-Libft"]
 	path = 42cursus-libft
 	url = https://github.com/KHammerschmidt/42cursus-Libft
 [submodule "42cursus-ft_printf"]
