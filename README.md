@@ -30,4 +30,3 @@
 | **[`so_long`](https://github.com/KHammerschmidt/42cursus-so_long)**							| a small 2D game to learn about textures, sprites and tiles | [![khammers's 42 so_long Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2349866)](https://github.com/JaeSeoKim/badge42)					|
 | **[`minishell`](https://github.com/KHammerschmidt/42cursus-minishell)**							| group project: implementing our own shell													 | [![khammers's 42 minishell Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2460301)](https://github.com/JaeSeoKim/badge42)					|
 | **[`cub3D`](https://github.com/KHammerschmidt/42cursus-cub3d)**								| group project: 3D game inspired by 90s first FPS Wolfenstein												 | [![khammers's 42 cub3d Score](https://badge42.vercel.app/api/v2/cl9mxvq9700780hl4msqc8saj/project/2535317)](https://github.com/JaeSeoKim/badge42)					|
->>>>>>> cfaf272f4ce75400ed16852af4a22c1afae46dc8
